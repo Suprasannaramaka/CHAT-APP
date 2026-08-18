@@ -43,7 +43,10 @@ io.on("connection" , (socket) =>
 app.use(express.json({limit: "4mb"}));
 app.use(cors(
     {
-        origin: "",
+        origin: [
+            "http://localhost:5173" ,
+             "https://chat-pheam9l9u-ramakasuprasannas-projects.vercel.app"
+        ],
         credentials: true
     }
 ));
