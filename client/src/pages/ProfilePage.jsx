@@ -133,7 +133,7 @@ const ProfilePage = () => {
     const displayedImage = previewUrl ||authUser.profilePic ||assets.avatar_icon;
     return (
         <div className="min-h-screen flex items-center justify-center px-4">
-            <div className="w-full max-w-2xl backdrop-blur-2xl  text-black  border-2 border-[#25223b]
+            <div className="w-full max-w-2xl backdrop-blur-2xl  text-white  border-2 border-[#25223b]
              flex  items-center justify-between max-sm:flex-col-reverse  rounded-lg overflow-hidden">
                 {/* LEFT SIDE */}
                 <form
