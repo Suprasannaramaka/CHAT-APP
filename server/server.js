@@ -43,7 +43,7 @@ io.on("connection" , (socket) =>
 app.use(express.json({limit: "4mb"}));
 app.use(cors(
     {
-        origin: "http://localhost:5173",
+        origin: "",
         credentials: true
     }
 ));
@@ -63,4 +63,4 @@ httpServer.listen(PORT , () => console.log("Server is running on PORT : " + PORT
 
 //Export server for vercel
 
-export default Server;
+export default app;
