@@ -5,7 +5,7 @@ import http from "http";
 import { connectDB } from "./lib/db.js";
 import userRouter from "./routes/routes.js";
 import messageRouter from "./routes/messageroutes.js";
-import {Server} from "socket.io";
+import { Server } from "socket.io";
 //create Express App and HTTP server
 const app = express();
 const httpServer = http.createServer(app);
@@ -62,4 +62,5 @@ httpServer.listen(PORT , () => console.log("Server is running on PORT : " + PORT
 }
 
 //Export server for vercel
+
 export default Server;
