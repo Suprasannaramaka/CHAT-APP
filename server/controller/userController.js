@@ -29,6 +29,7 @@ export const signup = async (req, res) => {
             fullName,
             email,
             password: hashedPassword,
+            profilePic,
             bio,
         });
         const token = generateToken(newUser._id);
