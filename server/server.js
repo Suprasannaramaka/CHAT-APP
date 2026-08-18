@@ -45,7 +45,7 @@ app.use(cors({
     origin: (origin, callback) => {
         const allowedOrigins = [
             "http://localhost:5173",
-            "https://chat-pheam9l9u-ramakasuprasannas-projects.vercel.app"
+            "chat-app-phi-sooty-8oh3joks6t.vercel.app",
         ];
 
         if (!origin || allowedOrigins.includes(origin)) {
