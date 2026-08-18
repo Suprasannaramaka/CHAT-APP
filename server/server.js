@@ -4,7 +4,7 @@ import cors from "cors";
 import http from "http";
 import { connectDB } from "./lib/db.js";
 import {userRouter  } from "./routes/routes.js";
-import { messageRouter } from "./routes/messageroutes.js";
+import { messageRouter } from "./routes/messageRoutes.js";
 import { Server } from "socket.io";
 //create Express App and HTTP server
 const app = express();
