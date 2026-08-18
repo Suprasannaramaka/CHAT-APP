@@ -41,15 +41,23 @@ io.on("connection" , (socket) =>
 }) 
 //Middleware setup
 app.use(express.json({limit: "4mb"}));
-app.use(cors(
-    {
-        origin: [
-            "http://localhost:5173" ,
-             "https://chat-pheam9l9u-ramakasuprasannas-projects.vercel.app"
-        ],
-        credentials: true
-    }
-));
+app.use(cors({
+    origin: (origin, callback) => {
+        const allowedOrigins = [
+            "http://localhost:5173",
+            "https://chat-pheam9l9u-ramakasuprasannas-projects.vercel.app"
+        ];
+
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error(`CORS blocked: ${origin}`));
+        }
+    },
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
 //Routes setup
 app.get("/api/status", (req , res) => res.send("Server is live"));
