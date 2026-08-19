@@ -2,6 +2,7 @@ import express from "express";
 import "dotenv/config";
 import cors from "cors";
 import https from "https";
+import http from "http";
 import { connectDB } from "./lib/db.js";
 import router from "./routes/routes.js";
 import messageRouter from "./routes/messageRoutes.js";
