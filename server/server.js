@@ -42,19 +42,8 @@ io.on("connection" , (socket) =>
 //Middleware setup
 app.use(express.json({limit: "4mb"}));
 app.use(cors({
-    origin: (origin, callback) => {
-        const allowedOrigins = [
-            "http://localhost:5173",
-            "http://chat-app-phi-sooty-8oh3joks6t.vercel.app",
-        ];
-
-        if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true);
-        } else {
-            callback(new Error(`CORS blocked: ${origin}`));
-        }
-    },
-    credentials: true,
+     origin:  "https://chat-app-phi-sooty-8oh3joks6t.vercel.app" ,
+   credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"]
 }));
@@ -66,7 +55,7 @@ app.use("/api/messages" , messageRouter)
 //Connect to MongoDB
 await connectDB();
 
-if(process.env.NODE_ENV !== "Production")
+if(process.env.NODE_ENV !== "production")
 {
 const PORT = process.env.PORT || 5000;
 httpServer.listen(PORT , () => console.log("Server is running on PORT : " + PORT));
