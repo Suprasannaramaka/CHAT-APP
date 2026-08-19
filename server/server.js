@@ -49,6 +49,11 @@ app.use(cors({
 }));
 //Routes setup
 app.get("/api/status", (req , res) => res.send("Server is live"));
+app.get("/api/test-auth", (req, res) => {
+    res.json({
+        message: "Auth routing works"
+    });
+});
 app.use("/api/auth" , userRouter);
 app.use("/api/messages" , messageRouter)
 //Connect to MongoDB
