@@ -63,7 +63,7 @@ app.post("/api/test-login", (req, res) => {
     });
 });
 app.use("/api/auth" , router);
-app.use("/api/messages" , messageRouter)
+app.use("/api/messages" , messageRouter);
 //Connect to MongoDB
 await connectDB();
 
