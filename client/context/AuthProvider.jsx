@@ -141,7 +141,7 @@ console.log("BACKEND URL:", axios.defaults.baseURL);
  } 
 }, [token]); 
 // CONTEXT VALUE
-const value = { axios, authUser, onlineUsers, socket, login, logout, updateProfile, }; 
+const value = { axios, authUser, onlineUsers, socket, login, logout, updateProfile }; 
     return (
         <AuthContext.Provider value={value}>
             {children}
