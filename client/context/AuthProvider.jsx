@@ -5,8 +5,8 @@ import {toast} from "react-hot-toast";
 import { AuthContext } from "../context/AuthContext";
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
-console.log("BACKEND URL:", backendUrl);
 axios.defaults.baseURL = backendUrl;
+console.log("BACKEND URL:", axios.defaults.baseURL);
 
  const AuthProvider = ({ children }) => { 
     const [token, setToken] = useState(() => localStorage.getItem("token") );
