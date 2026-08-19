@@ -54,7 +54,7 @@ app.get("/api/test-auth", (req, res) => {
         message: "Auth routing works"
     });
 });
-app.use("/api/auth" , userRouter);
+app.use("/api/auth" , router);
 app.use("/api/messages" , messageRouter)
 //Connect to MongoDB
 await connectDB();
