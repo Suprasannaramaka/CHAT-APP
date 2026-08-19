@@ -54,6 +54,14 @@ app.get("/api/test-auth", (req, res) => {
         message: "Auth routing works"
     });
 });
+app.post("/api/test-login", (req, res) => {
+    console.log("🔥 TEST LOGIN ROUTE REACHED");
+
+    res.json({
+        success: true,
+        message: "Test route works"
+    });
+});
 app.use("/api/auth" , router);
 app.use("/api/messages" , messageRouter)
 //Connect to MongoDB
