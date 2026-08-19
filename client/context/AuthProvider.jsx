@@ -11,7 +11,6 @@ console.log("BACKEND URL:", axios.defaults.baseURL);
  const AuthProvider = ({ children }) => { 
     const [token, setToken] = useState(() => localStorage.getItem("token") );
          const [authUser, setAuthUser] = useState(null); 
-    
          const [onlineUsers, setOnlineUsers] = useState([]); 
          const [socket, setSocket] = useState(null); 
          const socketRef = useRef(null);
