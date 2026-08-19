@@ -47,7 +47,7 @@ app.use(cors({
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"]
 }));
-add.OPTIONS( "/api/auth/signup"  , (req , res) =>{
+app.OPTIONS( "/api/auth/signup"  , (req , res) =>{
 console.log("OPTIONS api/auth/signup reached");
 res.sendStatus(204);
 })
