@@ -45,8 +45,8 @@ console.log("selectedUser:", selectedUser);
               <p>{user.fullName}</p>
               {
                 onlineUsers.includes(user._id)
-                ? <span className='text-green-400 text-xs'>Online</span> 
-                : <span className='text-neutral-400 text-xs'>Offline</span>
+                ? <span className='text-green-600 text-xs'>Online</span> 
+                : <span className='text-red-600 text-xs'>Offline</span>
               }
           </div>
           {
