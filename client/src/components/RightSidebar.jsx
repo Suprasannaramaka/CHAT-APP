@@ -19,7 +19,7 @@ const RightSidebar = () => {
          {onlineUsers.includes(selectedUser._id) && <p className="w-2 h-2 rounded-full bg-green-500"></p>}
           {selectedUser.fullName}
         </h1>
-        <p className="px-10 mx-auto">{selectedUser.bio}</p>
+        <p className="px-10 mx-auto text-white">{selectedUser.bio}</p>
       </div>
       <hr  className="border-[#78434350] my-4"/>
       <div className="px-5 text-xs text-amber-50">

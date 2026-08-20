@@ -45,8 +45,8 @@ alt="" className="w-5 cursor-pointer"/>}
      )}
      {
       currState === "Sign Up"  && isDataSubmitted && (
-        <textarea onChange={(e) =>setBio(e.target.value)} value={bio} rows={4} placeholder="Bio" 
-        className="p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="provide a short bio" required>
+        <textarea onChange={(e) =>setBio(e.target.value)} value={bio} rows={4} placeholder="provide a short bio" 
+        className="p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
         </textarea>
       )
      }
