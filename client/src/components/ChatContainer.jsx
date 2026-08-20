@@ -71,7 +71,7 @@ const ChatContainer = () => {
     if (!selectedUser) {
         return (
             <div className="flex flex-col items-center justify-center gap-2 text-gray-500 max-md:hidden">
-                <p className="text-lg font-medium text-black">
+                <p className="text-lg font-medium text-white">
                     Chat anytime, anywhere
                 </p>
             </div>
@@ -84,7 +84,7 @@ const ChatContainer = () => {
                 <img
                     src= {selectedUser.profilePic || assets.avatar_icon}
                     alt="User avatar" className="w-8  rounded-full"/>
-                <p className="flex-1 text-lg text-black flex items-center gap-2">
+                <p className="flex-1 text-lg text-white flex items-center gap-2">
                   {selectedUser.fullName}
                     {onlineUsers.includes(selectedUser._id) && (
                     <span className="w-2 h-2 rounded-full bg-green-500"></span>
