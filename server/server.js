@@ -74,4 +74,4 @@ await connectDB();
 
 //Export server for vercel
 
-export default app;
+export default httpServer;
