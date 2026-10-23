@@ -2,7 +2,7 @@
 import { useState, useContext, useEffect, useCallback } from "react";
 import { AuthContext } from "./AuthContext";
 import { ChatContext } from "./ChatContext";
-import api  from "../services/api";
+import {api}  from  "../src/services/api.js";
 
 export const ChatProvider = ({ children }) => {
     const [messages, setMessages] = useState([]);
