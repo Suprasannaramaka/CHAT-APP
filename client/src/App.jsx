@@ -1,22 +1,32 @@
-import { Navigate , Routes , Route} from "react-router-dom";
+import { Navigate, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import ProfilePage from "./pages/ProfilePage";
-import {Toaster} from "react-hot-toast";
-import { AuthContext } from "../context/AuthContext";
+import { Toaster } from "react-hot-toast";
+import { AuthContext, AuthProvider } from "../context/AuthContext";
+import { ChatProvider } from "../context/ChatContextValue";
 import { useContext } from "react";
-const App =() =>
-{
-   const { authUser } = useContext(AuthContext);
-return(
-   <div className="bg-[url('/bgImage.svg')] bg-contain">
-      <Toaster/>
-    <Routes>
-      <Route path='/' element={ authUser ? <HomePage/> : <Navigate to ="/login"/>}/>
-      <Route path='/login' element={!authUser ? <LoginPage/> :  <Navigate to = "/" /> }/>
-      <Route path='/profile' element={ authUser ?  <ProfilePage/>  : <Navigate to ="/login" />  }/>
-      </Routes>
-   </div>
-)
+
+const AppRoutesContent = () => {
+    const { authUser } = useContext(AuthContext);
+    return (
+        <div className="bg-[url('/bgImage.svg')] bg-contain min-h-screen">
+            <Toaster />
+            <Routes>
+                <Route path='/' element={authUser ? <HomePage /> : <Navigate to="/login" />} />
+                <Route path='/login' element={!authUser ? <LoginPage /> : <Navigate to="/" />} />
+                <Route path='/profile' element={authUser ? <ProfilePage /> : <Navigate to="/login" />} />
+            </Routes>
+        </div>
+    );
+};
+
+export default function App() {
+    return (
+        <AuthProvider>
+            <ChatProvider>
+                <AppRoutesContent />
+            </ChatProvider>
+        </AuthProvider>
+    );
 }
-export default App;
