@@ -30,7 +30,8 @@ console.log("BACKEND URL:", axios.defaults.baseURL);
                  return;
                  } 
         console.log( "Connecting Socket.IO for user:", userData._id ); 
-        const newSocket = io(backendUrl, { query: { userId: userData._id, }, });
+        const newSocket = io(backendUrl, { query: { userId: userData._id, },
+        transports: ["websocket"] });
  newSocket.on("connect", () => 
     { 
         console.log( "Socket connected:", newSocket.id ); });
