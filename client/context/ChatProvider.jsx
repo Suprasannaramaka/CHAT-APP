@@ -4,7 +4,7 @@ import { AuthContext } from "./AuthContext";
 import { ChatContext } from "./ChatContext";
 import {api}  from  "../src/services/api.js";
 
-export const ChatProvider = ({ children }) => {
+ const ChatProvider = ({ children }) => {
     const [messages, setMessages] = useState([]);
     const [users, setUsers] = useState([]);
     const [selectedUser, setSelectedUser] = useState(null);
@@ -122,3 +122,4 @@ export const ChatProvider = ({ children }) => {
         </ChatContext.Provider>
     );
 };
+export default  ChatProvider;
