@@ -5,7 +5,7 @@ import { AuthContext } from "../../context/AuthContext.jsx";
 import toast from "react-hot-toast";
 import { ChatContext } from "../../context/ChatContext.jsx";
 
- export const ChatContainer = () => {
+  const ChatContainer = () => {
     const { messages,selectedUser,setSelectedUser,sendMessage, getMessages,} = useContext(ChatContext);
     const { authUser, onlineUsers } = useContext(AuthContext);
     const scrollEnd = useRef(null);
@@ -203,3 +203,4 @@ import { ChatContext } from "../../context/ChatContext.jsx";
         </div>
     );
 };
+export default ChatContainer;
