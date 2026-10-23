@@ -4,7 +4,7 @@ import LoginPage from "./pages/LoginPage";
 import ProfilePage from "./pages/ProfilePage";
 import { Toaster } from "react-hot-toast";
 import { AuthContext} from "../context/AuthContext";
-import { AuthProvider } from "../context/AuthProvider";
+import {AuthProvider} from "../context/AuthProvider";
 import { ChatProvider } from "../context/ChatProvider";
 import { useContext } from "react";
 
