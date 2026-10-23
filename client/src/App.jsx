@@ -4,7 +4,7 @@ import LoginPage from "./pages/LoginPage";
 import ProfilePage from "./pages/ProfilePage";
 import { Toaster } from "react-hot-toast";
 import { AuthContext, AuthProvider } from "../context/AuthContext";
-import { ChatProvider } from "../context/ChatContextValue";
+import { ChatProvider } from "../context/ChatProvider";
 import { useContext } from "react";
 
 const AppRoutesContent = () => {

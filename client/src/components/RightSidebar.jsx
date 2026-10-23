@@ -1,7 +1,7 @@
 import { useContext, useMemo } from "react";
 import assets from "../assets/chat-app-assets/assets.js";
 import { AuthContext } from "../../context/AuthContext.jsx";
-import { ChatContext } from "../../context/ChatContextValue.jsx";
+import { ChatContext } from "../../context/ChatProvider.jsx";
 const RightSidebar = () => {
   const {selectedUser , messages } = useContext(ChatContext);
   const {logout , onlineUsers} = useContext(AuthContext);
