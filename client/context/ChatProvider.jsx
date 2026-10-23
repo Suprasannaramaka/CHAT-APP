@@ -14,7 +14,7 @@ export const ChatProvider = ({ children }) => {
     const { socket, axios, onlineUsers } = useContext(AuthContext);
 
     /* Get Users & Unseen Messages */
-    const getUsers = useCallback(async () => {
+   const getUsers = useCallback(async () => {
         if (!axios) return;
         try {
             const { data } = await axios.get("/api/messages/users");
