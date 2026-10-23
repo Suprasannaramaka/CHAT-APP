@@ -1,7 +1,7 @@
 import Sidebar from "../pages/Sidebar";
 import ChatContainer from "../components/ChatContainer";
 import RightSidebar from "../components/RightSidebar";
-import {ChatProvider} from "../../context/ChatProvider";
+import ChatProvider from "../../context/ChatProvider";
 
 const Home = () => {
   return (
@@ -19,4 +19,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home
