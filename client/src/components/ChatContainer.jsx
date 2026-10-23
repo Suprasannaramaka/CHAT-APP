@@ -3,7 +3,7 @@ import { useContext,useEffect,useRef,useState} from "react";
 import { formatMessageTime } from "../lib/utilits.js";
 import { AuthContext } from "../../context/AuthContext.jsx";
 import toast from "react-hot-toast";
-import { ChatContext } from "../../context/ChatProvider.jsx";
+import { ChatContext } from "../../context/ChatContext.jsx";
 
 const ChatContainer = () => {
     const { messages,selectedUser,setSelectedUser,sendMessage, getMessages,} = useContext(ChatContext);
