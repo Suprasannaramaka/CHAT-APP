@@ -8,7 +8,7 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL;
 axios.defaults.baseURL = backendUrl;
 console.log("BACKEND URL:", axios.defaults.baseURL);
 
- export const AuthProvider = ({ children }) => { 
+ const AuthProvider = ({ children }) => { 
     const [token, setToken] = useState(() => localStorage.getItem("token") );
          const [authUser, setAuthUser] = useState(null); 
          const [onlineUsers, setOnlineUsers] = useState([]); 
@@ -148,3 +148,4 @@ const value = { axios, authUser, onlineUsers, socket, login, logout, updateProfi
         </AuthContext.Provider>
     );
 };
+export default AuthProvider;
