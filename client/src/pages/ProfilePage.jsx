@@ -164,7 +164,7 @@ const ProfilePage = () => {
              outline-none focus:ring-2 focus:ring-violet-600 "/>
                     {/* BIO */}
                     <textarea value={bio} onChange={(e) => setBio(e.target.value) }
-                        placeholder="Write profile bio"  required rows={4}
+                        placeholder="Write profile bio" text-black required rows={4}
                         className=" p-3 border  border-gray-500 rounded-md
                      outline-none focus:ring-2 focus:ring-violet-500 resize-none "
                     />
