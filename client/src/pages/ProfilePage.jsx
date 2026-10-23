@@ -166,8 +166,7 @@ const ProfilePage = () => {
                     <textarea value={bio} onChange={(e) => setBio(e.target.value) }
                         placeholder="Write profile bio"  required rows={4}
                         className=" p-3 border  border-gray-500 rounded-md
-                     outline-none focus:ring-2 bg-white text-black focus:ring-violet-500 resize-none "
-                    />
+                     outline-none focus:ring-2 bg-white text-black focus:ring-violet-500 resize-none"/>
                     {/* SAVE */}
                     <button
                         type="submit"
