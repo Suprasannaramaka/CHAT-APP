@@ -10,7 +10,7 @@ import {api}  from  "../src/services/api.js";
     const [selectedUser, setSelectedUser] = useState(null);
     const [unseenMessages, setUnseenMessages] = useState({});
     
-    const { socket, onlineUsers } = useContext(AuthContext);
+    const { socket, onlineUsers , authUser } = useContext(AuthContext);
 
     /* Manual Fetch Helper (if called by components later) */
     const getUsers = useCallback(async () => {
@@ -76,6 +76,7 @@ import {api}  from  "../src/services/api.js";
 
     /* Socket.io Real-Time Listener */
     useEffect(() => {
+        if  (!authUser) return;
         if (!socket) return;
 
         const handleNewMessage = async (newMessage) => {
