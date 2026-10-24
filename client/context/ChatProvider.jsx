@@ -101,7 +101,7 @@ import { api }  from  "../src/services/api.js";
         return () => {
             socket.off("newMessage", handleNewMessage);
         };
-    }, [socket, selectedUser]);
+    }, [socket, authUser ,  selectedUser]);
 
     const value = {
         messages,
@@ -123,4 +123,4 @@ import { api }  from  "../src/services/api.js";
         </ChatContext.Provider>
     );
 };
-export default  ChatProvider;
+export default ChatProvider;
