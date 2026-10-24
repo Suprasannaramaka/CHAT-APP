@@ -2,12 +2,12 @@
 import { useState, useContext, useEffect, useCallback } from "react";
 import { AuthContext } from "./AuthContext";
 import { ChatContext } from "./ChatContext";
-import {api}  from  "../src/services/api.js";
+import { api }  from  "../src/services/api.js";
 
  const ChatProvider = ({ children }) => {
     const [messages, setMessages] = useState([]);
     const [users, setUsers] = useState([]);
-    const [selectedUser, setSelectedUser] = useState(null);
+    const [selectedUser, setSelectedUser] = useState();
     const [unseenMessages, setUnseenMessages] = useState({});
     
     const { socket, onlineUsers , authUser } = useContext(AuthContext);
