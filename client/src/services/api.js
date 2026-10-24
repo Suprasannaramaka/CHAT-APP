@@ -1,8 +1,8 @@
 import axios from "axios";
-const API_URL = import.meta.env.VITE_BACKEND_URL;
+const backendURL = import.meta.env.VITE_BACKEND_URL;
 
 export const api = axios.create({
-    baseURL: API_URL,
+    baseURL: backendURL,
     withCredentials: true, // Needed if you are using cookies/sessions
 });
 
